@@ -6,7 +6,7 @@ export function bundleIdentifiers(currentAppName, newName, projectName, currentB
   const nS_NewName = newName.replace(/\s/g, '');
   const lC_Ns_CurrentBundleID = currentBundleID.toLowerCase();
   const lC_Ns_NewBundleID = newBundleID.toLowerCase();
-
+  
   return [
     {
       regex: currentBundleID,
@@ -16,7 +16,7 @@ export function bundleIdentifiers(currentAppName, newName, projectName, currentB
     {
       regex: currentBundleID,
       replacement: newBundleID,
-      paths: [`${newBundlePath}/MainActivity.java`, `${newBundlePath}/MainApplication.java`],
+      paths: [`${newBundlePath}/MainActivity.java`, `${newBundlePath}/MainApplication.java`,  `${newBundlePath}/SplashActivity.java`],
     },
     {
       regex: lC_Ns_CurrentBundleID,
